@@ -35,7 +35,7 @@ MORSE_CODE = {
   '--...' => '7',
   '---..' => '8',
   '----.' => '9'
-}
+}.freeze
 
 def decode_char(morse_char)
   MORSE_CODE[morse_char] || ''
@@ -44,7 +44,7 @@ end
 # puts decode_char(".-") => A
 
 def decode_word(morse_word)
-  morse_code_to_words = morse_word.split(' ')
+  morse_code_to_words = morse_word.split
   word = ''
   morse_code_to_words.each do |i|
     word += decode_char(i)
